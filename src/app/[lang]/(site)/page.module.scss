@@ -1,0 +1,24 @@
+@import "@/styles/utilities/mixin.scss";
+
+.section-hero {
+}
+.title {
+  display: none;
+  font-family: Ubuntu;
+  font-size: 117px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 134px; /* 114.53% */
+  text-transform: capitalize;
+
+  @include media(tablet) {
+    display: block;
+    text-align: center;
+    margin-bottom: 64px;
+  }
+}
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

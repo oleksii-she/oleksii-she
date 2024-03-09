@@ -1,0 +1,29 @@
+@import "@/styles/utilities/mixin";
+
+.link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: capitalize;
+  color: var(--text-primary-color);
+
+  @include media(tablet) {
+    &:hover {
+      color: var(--text-secondary-color);
+      transition: var(--transition);
+    }
+  }
+
+  @include media(laptop) {
+    font-size: 24px;
+    line-height: 133%;
+    &:hover {
+      color: var(--text-secondary-color);
+      transition: var(--transition);
+    }
+  }
+
+  &__active {
+    color: var(--text-secondary-color);
+  }
+}

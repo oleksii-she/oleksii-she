@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --text-primary-color: #ffffff;
+  --text-secondary-color: #12f7d6;
+  --bg-secondary: #292f36;
+  --white: #ffffff;
+
+  --transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  --text-size-very-small: 14px;
+  --text-size-small: 16px;
+  --text-size-primary: 20px;
+  --text-size-normal: 24px;
+  --text-size-big: 32px;
+
+  --line-height-secondary: 128.571%;
+  --line-height-big: 131.25%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 7, 0;
+    --background-end-rgb: 31, 42, 144;
+  }
+}
+
+body {
+  font-family: "IBM Plex Mono";
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+p {
+  font-family: "IBM Plex Mono";
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.logo {
+  /* width: 133px;
+  height: 20px; */
+  color: var(--text-secondary-color);
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  font-size: var(--text-size-small);
+
+  text-transform: capitalize;
+
+  @media (min-width: 768px) {
+    font-size: var(--text-size-normal);
+  }
+
+  @media (min-width: 1280px) {
+    font-size: var(--text-size-big);
+  }
+}
