@@ -1,4 +1,4 @@
-import { getPet } from "../../../../sanity/schemas/utils";
+// import { getPet } from "../../../../sanity/schemas/utils";
 import Image from "next/image";
 interface IBlogs {
   name: string;
@@ -14,9 +14,9 @@ interface IBlogs {
 // }
 
 export default async function Portfolio() {
-  const blogs = await getPet();
+  // const blogs = await getPet();
 
-  console.log(blogs, "blogs");
+  // console.log(blogs, "blogs");
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
