@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import Image from "next/image";
 import styles from "./header.module.scss";
 import logo from "../../../public/logo.png";
@@ -13,15 +14,7 @@ export const Header = ({ locale }: { locale: Locale }) => {
         <div className="container mx-auto px-6">
           <div className={`${styles.wrapper}`}>
             <Link href="/" className="logo">
-              {"<OleksiiShe />"}
-              {/* <Image
-                className="logo"
-                alt="logo"
-                src={logo}
-                width={600}
-                height={600}
-                quality={100}
-              /> */}
+              {"<S/>"}
             </Link>
             <nav>
               <ul className={`${styles["nav-list"]}`}>

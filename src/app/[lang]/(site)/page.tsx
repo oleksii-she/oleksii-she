@@ -1,10 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getHero, getProfile } from "../../../../sanity/schemas/utils";
-import { IHero, IProfile } from "@/types/types";
+import {
+  getHero,
+  getProfile,
+  getAboutMe,
+} from "../../../../sanity/schemas/utils";
+import { IAbout, IHero, IProfile } from "@/types/types";
 import { Locale } from "../../../../i18n.config";
 import { Profile } from "@/components/profile/Profile";
+import { Hero } from "@/components/hero/hero";
 import styles from "./page.module.scss";
+import { getDictionary } from "@/lib/dictonary";
+import { AboutMe } from "@/components/about/aboutMe";
+import { ScrollIcon, ScrollBottomIcon } from "@/components/icons";
 export const revalidate = 20;
 
 export default async function Home({
@@ -12,50 +20,54 @@ export default async function Home({
 }: {
   params: { lang: Locale };
 }) {
+  const { hero: heroContents } = await getDictionary(lang);
   const hero: IHero[] = await getHero();
   const profile: IProfile[] = await getProfile();
-
-  const heroObj = hero[0];
-  // const profileObj = profile[0];
-
-  const Name = heroObj.title?.uk
-    ? heroObj.title?.uk.replace("Олексій", "<span>Олексій</span>")
-    : "";
-  const NameEn = heroObj.title?.en
-    ? heroObj.title?.en.replace("Oleksii", "<span>Oleksii</span>")
-    : "";
+  const about: IAbout[] = await getAboutMe();
 
   return (
     <main>
-      <section>
-        {heroObj && (
+      <section className={styles["section-hero"]}>
+        {hero[0] && (
           <h2 className={styles.title}>
-            {lang === "uk" ? heroObj.section?.uk : heroObj.section?.en}
+            {lang === "uk" ? hero[0].section?.uk : hero[0].section?.en}
           </h2>
         )}
 
         <div className="container mx-auto px-8">
-          <div className={styles.hero}>
-            {profile[0] && <Profile profileObj={profile[0]} lang={lang} />}
-            {heroObj && (
-              <div>
-                <h1
-                  dangerouslySetInnerHTML={{
-                    __html: lang === "uk" ? Name : NameEn,
-                  }}
+          <div className={styles["section-hero__wrapper"]}>
+            <div className={styles["profile"]}>
+              {profile[0] && <Profile profileObj={profile[0]} lang={lang} />}
+            </div>
+            <div className={styles["hero-box"]}>
+              {hero[0] && (
+                <Hero
+                  heroObj={hero[0]}
+                  lang={lang}
+                  letsTalks={heroContents.button}
                 />
-              </div>
-            )}
-            <p>
-              {"<p>"}
-              {lang === "uk"
-                ? heroObj.description?.uk
-                : heroObj.description?.en}
-              {"</p>"}
-            </p>
+              )}
+            </div>
           </div>
         </div>
       </section>
+
+      {about[0] && (
+        <section className={styles["section-about"]}>
+          <div className={styles["icon-wrapper"]}>
+            <div>
+              <ScrollIcon className="" />
+
+              <ScrollBottomIcon
+                className={styles["icon-wrapper__icon-bottom-scroll"]}
+              />
+            </div>
+          </div>
+          <div className="container mx-auto px-8">
+            <AboutMe about={about[0]} lang={lang} />
+          </div>
+        </section>
+      )}
     </main>
   );
 }

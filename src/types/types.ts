@@ -15,11 +15,8 @@ export interface IHero {
     _type: string;
     en: string;
   };
-  title?: {
-    uk: string;
-    _type: string;
-    en: string;
-  };
+  title?: any;
+
   description?: {
     uk: string;
     _type: string;
@@ -27,16 +24,15 @@ export interface IHero {
   };
 }
 
-interface IAbout {
-  sectionName: string;
-  desc: Array<{
-    style: string;
-    _key: string;
-    markDefs: Array<any>;
-    children: Array<any>;
+export interface IAbout {
+  _id?: string;
+  section?: {
+    uk: string;
     _type: string;
-  }>;
-  image: string;
+    en: string;
+  };
+  description?: any;
+  image?: string;
 }
 
 interface ISkills {

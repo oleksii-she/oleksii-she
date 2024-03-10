@@ -1,10 +1,10 @@
 import { defineType, defineField } from "sanity";
 import { baseLanguage } from "./localeType";
 
-export const heroSchema = defineType({
-  name: "hero",
+export const aboutMe = defineType({
+  title: "About",
+  name: "about",
   type: "document",
-  title: "Hero",
   fields: [
     defineField({
       name: "section",
@@ -12,32 +12,28 @@ export const heroSchema = defineType({
       title: "Section",
       preview: {
         select: {
-          title: "Section",
-          subtitle: `title.${baseLanguage?.id}`,
+          title: "section",
+          subtitle: `section.${baseLanguage?.id}`,
         },
       },
     }),
-    defineField({
-      name: "title",
-      type: "localeArrayBlock",
-      title: "Title",
-      preview: {
-        select: {
-          title: "Title",
-          subtitle: `title.${baseLanguage?.id}`,
-        },
-      },
-    }),
+
     defineField({
       name: "description",
-      type: "localeText",
+      type: "localeArrayBlock",
       title: "Description",
       preview: {
         select: {
           title: "Description",
-          subtitle: `title.${baseLanguage?.id}`,
+          subtitle: `description.${baseLanguage?.id}`,
         },
       },
+    }),
+
+    defineField({
+      name: "image",
+      type: "image",
+      title: "image",
     }),
   ],
 });

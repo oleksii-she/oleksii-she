@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Locale } from "../../../i18n.config";
 import styles from "./profile.module.scss";
-import { MailIcon, LocationIcon, DownloadIcon } from "../icons";
+import { MailIcon, LocationIcon, DownloadIcon, TelegramIcon } from "../icons";
 export const Profile = ({
   profileObj,
   lang,
@@ -32,6 +32,12 @@ export const Profile = ({
           <MailIcon className="" />
           <Link href={`mailto:${profileObj.email}`} target="blank">
             {profileObj.email}
+          </Link>
+        </li>
+        <li>
+          <TelegramIcon className="" />
+          <Link href={`https://t.me/oleksii_she`} target="blank">
+            oleksii_she
           </Link>
         </li>
         <li>

@@ -31,6 +31,12 @@
   line-height: var(--line-height-secondary);
 }
 
+@mixin size16 {
+  font-size: var(--text-size-small);
+
+  line-height: var(--line-height-primary);
+}
+
 $mobile: 320px;
 $tablet: 768px;
 $laptop: 1280px;

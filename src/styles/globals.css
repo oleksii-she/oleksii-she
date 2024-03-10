@@ -8,6 +8,8 @@
   --background-end-rgb: 255, 255, 255;
   --text-primary-color: #ffffff;
   --text-secondary-color: #12f7d6;
+  --text-title-color: #98faec;
+  /* 98FAEC */
   --bg-secondary: #292f36;
   --white: #ffffff;
 
@@ -18,9 +20,16 @@
   --text-size-primary: 20px;
   --text-size-normal: 24px;
   --text-size-big: 32px;
+  --text-size-ultra-big: 64px;
 
+  --line-height-small: 112.5%;
+  --line-height-primary: 125%;
   --line-height-secondary: 128.571%;
   --line-height-big: 131.25%;
+
+  /* font */
+
+  --font-secondary: "__Ubuntu_909e52";
 }
 
 @media (prefers-color-scheme: dark) {

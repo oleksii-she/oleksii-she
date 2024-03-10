@@ -1,0 +1,60 @@
+@import "@/styles/utilities/mixin.scss";
+
+.hero {
+  &__title-wrapper {
+    @include size14;
+    color: var(--text-secondary-color);
+    font-family: var(--font-secondary);
+    font-size: var(--text-size-big);
+    line-height: var(--line-height-small);
+    color: var(--white);
+    @include media(tablet) {
+      font-size: var(--text-size-ultra-big);
+    }
+
+    p {
+      @include size14;
+      color: var(--text-secondary-color);
+    }
+    code {
+      color: var(--text-secondary-color);
+    }
+    margin-bottom: 32px;
+  }
+
+  &__text-wrapper {
+    color: var(--text-secondary-color);
+    p {
+      padding: 16px 24px;
+      color: var(--white);
+      max-width: 697px;
+    }
+    margin-bottom: 16px;
+  }
+
+  &__lets-talks {
+    display: flex;
+    align-items: center;
+    a {
+      color: var(--text-secondary-color);
+      @include size32;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon-wrapper {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: var(--bg-secondary);
+    width: 40px;
+    height: 40px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

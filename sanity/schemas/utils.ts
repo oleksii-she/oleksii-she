@@ -24,4 +24,10 @@ export async function getProfile() {
   );
 }
 
-//   _id,  "image":image.asset->url, name,description
+export async function getAboutMe() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "about"]{
+    _id, section, description, "image":image.asset->url
+      }`
+  );
+}
