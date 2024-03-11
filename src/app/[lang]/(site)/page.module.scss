@@ -126,3 +126,15 @@
 .skillsWrapper {
   margin-top: 90px;
 }
+
+.section-contact {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.contacts-title-wrapper {
+  margin-bottom: 64px;
+
+  @include media(laptop) {
+    margin-bottom: 116px;
+  }
+}

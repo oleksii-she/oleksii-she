@@ -16,6 +16,7 @@ import { getDictionary } from "@/lib/dictonary";
 import { AboutMe } from "@/components/about/aboutMe";
 import { ScrollIcon, ScrollBottomIcon, SkillsIcon } from "@/components/icons";
 import { SkillsList } from "@/components/skills/skillsList";
+import { FormSendMessage } from "@/components/form/formSendMessage";
 export const revalidate = 20;
 
 export default async function Home({
@@ -23,7 +24,12 @@ export default async function Home({
 }: {
   params: { lang: Locale };
 }) {
-  const { hero: heroContents, skills } = await getDictionary(lang);
+  const {
+    hero: heroContents,
+    skills,
+    contact,
+    message,
+  } = await getDictionary(lang);
   const hero: IHero[] = await getHero();
   const profile: IProfile[] = await getProfile();
   const about: IAbout[] = await getAboutMe();
@@ -39,7 +45,7 @@ export default async function Home({
           </h2>
         )}
 
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-6">
           <div className={styles["section-hero__wrapper"]}>
             <div className={styles["profile"]}>
               {profile[0] && <Profile profileObj={profile[0]} lang={lang} />}
@@ -68,7 +74,7 @@ export default async function Home({
               />
             </div>
           </div>
-          <div className="container mx-auto px-8">
+          <div className="container mx-auto px-6">
             <AboutMe about={about[0]} lang={lang} />
           </div>
         </section>
@@ -83,7 +89,7 @@ export default async function Home({
             />
           </div>
         </div>
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-6">
           <div className={styles.skills}>
             <div className={`${styles["skills__title-wrapper"]}`}>
               <h2>{skills.title}</h2>
@@ -100,6 +106,27 @@ export default async function Home({
               {resSkills && <SkillsList list={resSkills} />}
             </div>
           </div>
+        </div>
+      </section>
+      <section className={styles["section-contact"]}>
+        <div className={`${styles["icon-wrapper"]} ${styles["margin64"]}`}>
+          <div>
+            <ScrollIcon className="" />
+
+            <ScrollBottomIcon
+              className={styles["icon-wrapper__icon-bottom-scroll"]}
+            />
+          </div>
+        </div>
+        <div className="container mx-auto px-6">
+          <div
+            className={`${styles["skills__title-wrapper"]} ${styles["contacts-title-wrapper"]}`}
+          >
+            <h2>{contact.contact}</h2>
+            <SkillsIcon className="" />
+            <p>{contact.desc}</p>
+          </div>
+          <FormSendMessage content={contact} errorSubmit={message} />
         </div>
       </section>
     </main>

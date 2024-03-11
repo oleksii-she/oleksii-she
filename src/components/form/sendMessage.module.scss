@@ -1,0 +1,115 @@
+@import "@/styles/utilities/mixin.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__message-box {
+    border-radius: 32px 0px;
+    border: 2px solid var(--text-secondary-color);
+
+    padding: 16px 40px;
+
+    h2 {
+      color: var(--text-secondary-color);
+      @include size32;
+    }
+    margin-bottom: 80px;
+  }
+}
+
+.form {
+  width: 100%;
+  max-width: 480px;
+
+  @include media(desktop) {
+    max-width: 800px;
+  }
+  label {
+    p {
+      @include size16;
+      color: var(--text-secondary-color);
+    }
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid var(--text-secondary-color);
+    outline: none;
+    background-color: transparent;
+    max-width: 144px;
+
+    @include media(tablet) {
+      max-width: 264px;
+    }
+
+    @include media(desktop) {
+      min-width: 320px;
+      max-width: 400px;
+    }
+  }
+
+  textarea {
+    background-color: transparent;
+    outline: none;
+    border-radius: 25px;
+    padding: 16px;
+    border: 1px solid var(--text-secondary-color);
+    width: 100%;
+    overflow: auto;
+    min-height: 120px;
+
+    resize: none;
+  }
+
+  button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+    padding: 16px 32px;
+    border-radius: 32px;
+    background: var(--text-secondary-color);
+    color: var(--bg-secondary);
+    font-family: var(--font-secondary);
+    font-size: var(--text-size-primary);
+    text-transform: capitalize;
+
+    span {
+      margin-right: 16px;
+    }
+  }
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.bottomBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.errorMessage {
+  color: red;
+  @include size16;
+}
+
+.success {
+  position: absolute;
+  bottom: 80px;
+
+  @include size16;
+  color: var(--text-secondary-color);
+}

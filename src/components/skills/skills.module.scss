@@ -1,17 +1,14 @@
 @import "@/styles/utilities/mixin.scss";
 .list {
-  @include media(tablet) {
-    width: 380px;
-    margin: 0 auto;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 960px;
   @include media(laptop) {
-    width: 772px;
-    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
   }
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: start;
   li {
     display: flex;
     flex-direction: column;

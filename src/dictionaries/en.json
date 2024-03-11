@@ -4,5 +4,21 @@
   },
   "skills": {
     "title": "Skills"
+  },
+  "contact": {
+    "contact": "Contact",
+    "desc": "I am open to collaboration; you can send me a message here, and I will definitely get back to you",
+    "message": "Send me a message",
+    "YourName": "Your name *",
+    "YourEmail": "Your email *",
+    "YourMessage": "Your message *",
+    "EnterYourName": "Enter your name",
+    "EnterYourEmail": "Enter your email",
+    "EnterYourNeeds": "Enter your needs",
+    "SendMessage": "Send Message"
+  },
+  "message": {
+    "messageError": "Currently, in the service that sends messages, there are technical issues. Please contact me through another method, and I will definitely respond to you",
+    "success": "Thank you, I will definitely write you back!"
   }
 }
