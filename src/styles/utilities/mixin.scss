@@ -37,6 +37,12 @@
   line-height: var(--line-height-primary);
 }
 
+@mixin size64 {
+  font-family: var(--font-secondary);
+  font-size: var(--text-size-ultra-big);
+  line-height: var(--line-height-small);
+  text-transform: capitalize;
+}
 $mobile: 320px;
 $tablet: 768px;
 $laptop: 1280px;

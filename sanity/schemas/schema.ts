@@ -4,6 +4,7 @@ import { heroSchema } from "./Hero";
 import { aboutMe } from "./aboutMe";
 import { localeString, localeText, localeArrayBlock } from "./localeType";
 import { articleType } from "./articleType";
+import { skillsSchema, skillsTitleSchema } from "./skills";
 import { userCard } from "./profile";
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -13,5 +14,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     heroSchema,
     userCard,
     aboutMe,
+    skillsTitleSchema,
+    skillsSchema,
   ],
 };

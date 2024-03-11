@@ -34,10 +34,16 @@ export interface IAbout {
   description?: any;
   image?: string;
 }
-
-interface ISkills {
-  sectionName: string;
-  desc: string;
+export interface ISkillsTitle {
+  title: {
+    uk: string;
+    _type: string;
+    en: string;
+  };
+}
+export interface ISkills {
+  _id: string;
+  name: string;
   image: string;
 }
 

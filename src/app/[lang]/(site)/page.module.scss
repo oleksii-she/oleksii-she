@@ -52,8 +52,9 @@
 }
 .section-about {
   background-image: url("../../../../public/About.png");
+  background-size: 100% 100%;
   width: 100%;
-  min-height: 200px;
+  height: 100%;
   background-repeat: no-repeat;
   padding-top: 64px;
   padding-bottom: 64px;
@@ -85,4 +86,45 @@
   &__icon-bottom-scroll {
     margin-top: 5px;
   }
+}
+
+.section-skills {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  // position: relative;
+  // width: 100%;
+  background-image: url("../../../../public/Skills.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.skills {
+  &__title-wrapper {
+    h2 {
+      @include size64;
+      color: var(--text-secondary-color);
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin-top: 16px;
+      @include size16;
+      text-align: center;
+    }
+  }
+}
+
+.margin64 {
+  margin-bottom: 64px;
+}
+
+.icon-uk---width {
+  width: 200px;
+}
+
+.skillsWrapper {
+  margin-top: 90px;
 }

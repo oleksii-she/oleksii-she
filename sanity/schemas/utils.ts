@@ -31,3 +31,19 @@ export async function getAboutMe() {
       }`
   );
 }
+
+export async function getSkillsTitle() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "skills-title"]{
+    title
+      }`
+  );
+}
+
+export async function getSkills() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "skills"]{
+    _id, name, "image":image.asset->url
+      }`
+  );
+}

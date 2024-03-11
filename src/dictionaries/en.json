@@ -1,5 +1,8 @@
 {
   "hero": {
     "button": "let’s talk"
+  },
+  "skills": {
+    "title": "Skills"
   }
 }

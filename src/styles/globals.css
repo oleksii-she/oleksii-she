@@ -77,3 +77,7 @@ p {
     font-size: var(--text-size-big);
   }
 }
+
+.iconn-uk---width {
+  width: 200px;
+}
