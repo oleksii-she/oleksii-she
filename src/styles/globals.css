@@ -5,7 +5,7 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 26, 30, 35, 10;
   --text-primary-color: #ffffff;
   --text-secondary-color: #12f7d6;
   --text-title-color: #98faec;
@@ -35,13 +35,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 7, 0;
-    --background-end-rgb: 31, 42, 144;
+    --background-start-rgb: 26, 30, 35, 10;
+    --background-end-rgb: 26, 30, 35, 10;
   }
 }
 
 body {
-  /* font-family: "IBM Plex Mono"; */
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -50,9 +49,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-p {
+/* p {
   font-family: "IBM Plex Mono";
-}
+} */
 
 @layer utilities {
   .text-balance {

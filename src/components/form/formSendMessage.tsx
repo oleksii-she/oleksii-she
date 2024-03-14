@@ -87,7 +87,7 @@ export const FormSendMessage = ({
       <form action="" className={styles.form} onSubmit={handlerSubmit}>
         <div className={styles["input-box"]}>
           <label>
-            <p>{content.YourName}</p>
+            <p className={styles.signature}>{content.YourName}</p>
             <UInput
               name="name"
               type="text"
@@ -98,7 +98,7 @@ export const FormSendMessage = ({
             />
           </label>
           <label>
-            <p>{content.YourEmail}</p>
+            <p className={styles.signature}>{content.YourEmail}</p>
             <UInput
               name="email"
               type="email"
@@ -113,9 +113,11 @@ export const FormSendMessage = ({
           <p className={styles.errorMessage}>{errorMessage}</p>
         ) : (
           <div className={styles.bottomBox}>
+            <p className={styles.signature}>{content.YourMessage}</p>
             <textarea
               name="message"
               value={initialState.message}
+              placeholder={content.EnterYourNeeds}
               onChange={(e) => {
                 e.target.value;
 

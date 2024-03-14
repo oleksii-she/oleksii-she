@@ -3,10 +3,10 @@
 .profile {
   border-radius: 160px 0px;
   border: 4px solid var(--white);
-
-  background: var(--bg-secondary);
+  margin: 0 auto;
+  max-width: 340px;
   box-shadow: -4px -4px 2px 0px var(--text-secondary-color);
-  padding: 24px;
+  padding: 18px;
 
   &__name {
     margin-top: 16px;
@@ -52,7 +52,7 @@
   }
   &__cv {
     position: relative;
-    left: -16px;
+    left: -8px;
     margin-top: 32px;
     display: flex;
     align-items: center;

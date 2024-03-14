@@ -27,18 +27,13 @@
   @include media(desktop) {
     max-width: 800px;
   }
-  label {
-    p {
-      @include size16;
-      color: var(--text-secondary-color);
-    }
-  }
+
   input {
     border: none;
     border-bottom: 1px solid var(--text-secondary-color);
     outline: none;
     background-color: transparent;
-    max-width: 144px;
+    max-width: 154px;
 
     @include media(tablet) {
       max-width: 264px;
@@ -58,7 +53,7 @@
     border: 1px solid var(--text-secondary-color);
     width: 100%;
     overflow: auto;
-    min-height: 120px;
+    min-height: 210px;
 
     resize: none;
   }
@@ -94,13 +89,6 @@
   justify-content: center;
 }
 
-.bottomBox {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .errorMessage {
   color: red;
   @include size16;
@@ -111,5 +99,11 @@
   bottom: 80px;
 
   @include size16;
+  color: var(--text-secondary-color);
+}
+
+.signature {
+  @include size16;
+  margin-bottom: 24px;
   color: var(--text-secondary-color);
 }
