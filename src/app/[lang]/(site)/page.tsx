@@ -93,7 +93,7 @@ export default async function Home({
           <div className={styles.skills}>
             <div className={`${styles["skills__title-wrapper"]}`}>
               <h2>{skills.title}</h2>
-              <SkillsIcon className="" />
+
               {skillsTitle[0].title && (
                 <p>
                   {lang === "uk"
@@ -108,7 +108,7 @@ export default async function Home({
           </div>
         </div>
       </section>
-      <section className={styles["section-contact"]}>
+      <section className={styles["section-contact"]} id="contacts">
         <div className={`${styles["icon-wrapper"]} ${styles["margin64"]}`}>
           <div>
             <ScrollIcon className="" />
@@ -123,7 +123,7 @@ export default async function Home({
             className={`${styles["skills__title-wrapper"]} ${styles["contacts-title-wrapper"]}`}
           >
             <h2>{contact.contact}</h2>
-            <SkillsIcon className="" />
+
             <p>{contact.desc}</p>
           </div>
           <FormSendMessage content={contact} errorSubmit={message} />

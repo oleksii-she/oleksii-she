@@ -1,5 +1,13 @@
 @import "@/styles/utilities/mixin.scss";
 
+.relative {
+  // position: relative;
+
+  // @include media(desktop) {
+  //   width: 697px;
+  //   min-height: 454px;
+  // }
+}
 .hero {
   &__title-wrapper {
     @include size14;
@@ -7,7 +15,6 @@
     font-family: var(--font-secondary);
     font-size: var(--text-size-big);
     line-height: var(--line-height-small);
-    color: var(--white);
     @include media(tablet) {
       font-size: var(--text-size-ultra-big);
     }
@@ -57,4 +64,24 @@
       height: 24px;
     }
   }
+
+  // @include media(laptop) {
+  //   position: absolute;
+  //   animation-name: start-position;
+  //   animation-duration: 1s;
+  //   // top: -79px;
+
+  //   // width: 600px;
+  // }
 }
+
+// @keyframes start-position {
+//   0% {
+//     opacity: 0;
+//     right: -100vw;
+//   }
+//   100% {
+//     right: 0;
+//     opacity: 1;
+//   }
+// }

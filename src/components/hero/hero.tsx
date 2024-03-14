@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/dist/client/link";
 import { PortableText } from "@portabletext/react";
 import { IHero } from "@/types/types";
@@ -14,28 +15,30 @@ export const Hero = ({
   letsTalks: string;
 }) => {
   return (
-    <div className={styles.hero}>
-      <div className={styles["hero__title-wrapper"]}>
-        <p>{"<h1>"}</p>
-        <PortableText
-          value={lang === "uk" ? heroObj.title?.uk : heroObj.title?.en}
-        />
-        <p>{"</h1>"}</p>
-      </div>
+    <div className={styles.relative}>
+      <div className={styles.hero}>
+        <div className={styles["hero__title-wrapper"]}>
+          <p>{"<h1>"}</p>
+          <PortableText
+            value={lang === "uk" ? heroObj.title?.uk : heroObj.title?.en}
+          />
+          <p>{"</h1>"}</p>
+        </div>
 
-      <div className={styles["hero__text-wrapper"]}>
-        <span>{"<p>"}</span>
-        <p>
-          {lang === "uk" ? heroObj.description?.uk : heroObj.description?.en}
-        </p>
-        <span>{"</p>"}</span>
-      </div>
-      <div className={styles["hero__lets-talks"]}>
-        <Link href="#">
-          <span>{letsTalks}</span>
-        </Link>
-        <div className={styles["hero__icon-wrapper"]}>
-          <MailIcon className="" />
+        <div className={styles["hero__text-wrapper"]}>
+          <span>{"<p>"}</span>
+          <p>
+            {lang === "uk" ? heroObj.description?.uk : heroObj.description?.en}
+          </p>
+          <span>{"</p>"}</span>
+        </div>
+        <div className={styles["hero__lets-talks"]}>
+          <Link href="#contacts">
+            <span>{letsTalks}</span>
+          </Link>
+          <div className={styles["hero__icon-wrapper"]}>
+            <MailIcon className="" />
+          </div>
         </div>
       </div>
     </div>
