@@ -4,6 +4,7 @@ import { KeyboardIcon } from "@/components/icons";
 import { getPortfolio } from "../../../../../sanity/schemas/utils";
 import { getPortfolioSection } from "../../../../../sanity/schemas/utils";
 import { ISectionPortfolio, IPortfolio } from "@/types/types";
+export const revalidate = 20;
 interface IBlogs {
   name: string;
   desc: string;
@@ -19,7 +20,6 @@ export default async function Portfolio({
 
   const portfolioSection: ISectionPortfolio[] = await getPortfolioSection();
   const section: ISectionPortfolio = portfolioSection[0];
-  console.log(portfolio.length, "portfolio");
 
   return (
     <main>

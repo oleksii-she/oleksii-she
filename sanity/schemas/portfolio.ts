@@ -55,8 +55,8 @@ export const portfolioSchema = defineType({
       of: [
         defineArrayMember({
           type: "object",
-          name: "role",
-          fields: [{ type: "string", name: "role" }],
+          name: "name",
+          fields: [{ type: "string", name: "name" }],
         }),
       ],
     }),
@@ -67,8 +67,8 @@ export const portfolioSchema = defineType({
       of: [
         defineArrayMember({
           type: "object",
-          name: "library",
-          fields: [{ type: "string", name: "library" }],
+          name: "name",
+          fields: [{ type: "string", name: "name" }],
         }),
       ],
     }),

@@ -34,17 +34,30 @@ export const PortfolioList = ({
                   }
                 />
               </div>
-
-              <div className={styles["item__wrapper-role"]}>
+              <div>
                 {el.roles &&
                   el.roles.length <= 3 &&
-                  el.roles.map((role) => <p key={role._key}>{role.name}</p>)}
+                  el.roles.map((role) => (
+                    <div
+                      key={role._key}
+                      className={styles["item__wrapper-role"]}
+                    >
+                      <p>{role.name}</p>
+                    </div>
+                  ))}
               </div>
 
-              <div className={styles["item__wrapper-role"]}>
+              <div>
                 {el.libraries &&
                   el.libraries.length <= 3 &&
-                  el.libraries.map((lib) => <p key={lib._key}>{lib.name}</p>)}
+                  el.libraries.map((lib) => (
+                    <div
+                      key={lib._key}
+                      className={styles["item__wrapper-role"]}
+                    >
+                      <p>{lib.name}</p>
+                    </div>
+                  ))}
               </div>
 
               <Link href="">
