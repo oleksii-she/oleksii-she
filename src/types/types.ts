@@ -55,12 +55,40 @@ interface ISkillsItem {
   skill: string;
 }
 
-interface ISectionPortfolio {
-  sectionName: string;
-  desc: string;
+export interface ISectionPortfolio {
+  section: {
+    uk: string;
+    _type: string;
+    en: string;
+  };
+  description: {
+    uk: string;
+    _type: string;
+    en: string;
+  };
 }
 
-interface IPortfolio {
-  name: string;
-  desc: string;
+export interface IPortfolio {
+  _id: string;
+  title: {
+    uk: string;
+    _type: string;
+    en: string;
+  };
+  roles: [
+    {
+      _type: string;
+      name: string;
+      _key: string;
+    }
+  ];
+  libraries: [
+    {
+      _type: string;
+      name: string;
+      _key: string;
+    }
+  ];
+  description: any;
+  image: string;
 }

@@ -53,7 +53,7 @@ export const FormSendMessage = ({
     setInitialState({ ...initialState, [name]: value });
   };
 
-  const handlerSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
+  const handlerSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
 
     const reset = {
@@ -61,20 +61,25 @@ export const FormSendMessage = ({
       email: "",
       message: "",
     };
-    const sendMessage = await fetch(`${URI_API}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        parse_mode: "html",
-        text: messageTg,
-      }),
-    });
-    if (!sendMessage.ok) {
-      return setErrorMessage(errorSubmit.messageError);
-    }
+
+    const senderMessage = async (): Promise<void> => {
+      const sendMessage = await fetch(`${URI_API}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          parse_mode: "html",
+          text: messageTg,
+        }),
+      });
+      if (!sendMessage.ok) {
+        return setErrorMessage(errorSubmit.messageError);
+      }
+    };
+    senderMessage();
+
     setSuccess(errorSubmit.success);
     setInitialState(reset);
   };
@@ -84,7 +89,11 @@ export const FormSendMessage = ({
       <div className={styles["wrapper__message-box"]}>
         <h2>{content.message}</h2>
       </div>
-      <form action="" className={styles.form} onSubmit={handlerSubmit}>
+      <form
+        action=""
+        className={styles.form}
+        onSubmit={(e) => handlerSubmit(e)}
+      >
         <div className={styles["input-box"]}>
           <label>
             <p className={styles.signature}>{content.YourName}</p>
@@ -119,8 +128,6 @@ export const FormSendMessage = ({
               value={initialState.message}
               placeholder={content.EnterYourNeeds}
               onChange={(e) => {
-                e.target.value;
-
                 setInitialState({ ...initialState, message: e.target.value });
               }}
               required={true}

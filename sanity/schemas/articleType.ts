@@ -1,4 +1,4 @@
-import { defineType, defineField } from "sanity";
+import { defineType, defineField, defineArrayMember } from "sanity";
 
 export const articleType = defineType({
   title: "Article",
@@ -6,14 +6,16 @@ export const articleType = defineType({
   type: "document",
   fields: [
     defineField({
-      name: "language",
-      type: "string",
-      options: {
-        list: [
-          { title: "English", value: "en" },
-          { title: "Ukraine", value: "uk" },
-        ],
-      },
+      name: "tags",
+      type: "array",
+      title: "Tags for item",
+      of: [
+        defineArrayMember({
+          type: "object",
+          name: "role",
+          fields: [{ type: "string", name: "name" }],
+        }),
+      ],
     }),
     defineField({
       name: "title",

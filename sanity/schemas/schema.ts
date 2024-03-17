@@ -6,6 +6,7 @@ import { localeString, localeText, localeArrayBlock } from "./localeType";
 import { articleType } from "./articleType";
 import { skillsSchema, skillsTitleSchema } from "./skills";
 import { userCard } from "./profile";
+import { portfolioSchema, portfolioSection } from "./portfolio";
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     localeString,
@@ -16,5 +17,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     aboutMe,
     skillsTitleSchema,
     skillsSchema,
+    portfolioSchema,
+    portfolioSection,
   ],
 };

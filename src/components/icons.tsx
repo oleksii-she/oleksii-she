@@ -277,10 +277,10 @@ export const SkillsIcon = ({ className }: { className: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       width="320"
       height="12"
-      viewBox="0 0 320 12" // Змінено значення viewBox на відповідне новому width
+      viewBox="0 0 320 12"
       fill="none"
       className={className}
-      preserveAspectRatio="xMinYMin meet" // Додано атрибут preserveAspectRatio
+      preserveAspectRatio="xMinYMin meet"
     >
       <path
         d="M0.666667 6C0.666667 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666667 6 0.666667C3.05448 0.666667 0.666667 3.05448 0.666667 6ZM148.667 6C148.667 8.94552 151.054 11.3333 154 11.3333C156.946 11.3333 159.333 8.94552 159.333 6C159.333 3.05448 156.946 0.666667 154 0.666667C151.054 0.666667 148.667 3.05448 148.667 6ZM6 7H154V5H6V7Z"
@@ -308,6 +308,73 @@ export const SendMessageIcon = ({ className }: { className: string }) => {
         fill="#292F36"
         className={className}
       />
+    </svg>
+  );
+};
+
+export const KeyboardIcon = ({ className }: { className: string }) => {
+  return (
+    <svg
+      fill="#12F7D6"
+      version="1.1"
+      id="Capa_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 60 60"
+      xmlSpace="preserve"
+      className={className}
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {" "}
+        <g>
+          {" "}
+          <g>
+            {" "}
+            <path d="M2,13h10c0.6,0,1-0.4,1-1V2h33v5h2V1c0-0.6-0.4-1-1-1H12l0,0c-0.1,0-0.2,0-0.3,0.1h-0.1c-0.1,0.1-0.2,0.1-0.3,0.2l0,0 l-11,11l0,0c-0.1,0.1-0.1,0.2-0.2,0.3v0.1C0.1,11.8,0,11.9,0,12l0,0v47c0,0.6,0.4,1,1,1h29v-2H2L2,13L2,13z M3.4,11l3.8-3.8 L11,3.4V11H3.4z"></path>{" "}
+            <path d="M53,39H43c-3.9,0-7,3.1-7,7v14h2V46c0-2.8,2.2-5,5-5h1.3l2.8,7.4c0.1,0.3,0.5,0.6,0.9,0.6s0.8-0.3,1.1-0.6l2.8-7.4H53 c2.8,0,5,2.2,5,5v14h2V46C60,42.1,56.9,39,53,39z M48.1,45.2L46.5,41h3.2L48.1,45.2z"></path>{" "}
+            <rect x="47" y="51" width="2" height="2"></rect>{" "}
+            <rect x="47" y="55" width="2" height="2"></rect>{" "}
+            <path d="M47,38h2c2.8,0,5-2.2,5-5v-3c0-2.8-2.2-5-5-5h-2c-2.8,0-5,2.2-5,5v3C42,35.8,44.2,38,47,38z M44,30c0-1.7,1.3-3,3-3h2 c1.7,0,3,1.3,3,3v3c0,1.7-1.3,3-3,3h-2c-1.7,0-3-1.3-3-3V30z"></path>{" "}
+            <rect x="41" y="49" width="2" height="11"></rect>{" "}
+            <rect x="53" y="49" width="2" height="11"></rect>{" "}
+            <path d="M59,14h-3v-3c0-0.6-0.4-1-1-1H34v2h20v2h-3H23c-0.2,0-0.4,0.1-0.5,0.1l-7.9,3C14.3,17.2,14,17.6,14,18s0.3,0.8,0.6,0.9 l7.9,3c0.1,0,0.2,0.1,0.3,0.1s0.2,0,0.2,0h28h8c0.6,0,1-0.4,1-1v-6C60,14.4,59.6,14,59,14z M22,16.5v3.1L17.8,18L22,16.5z M24,16 h26v4H24V16z M58,20h-6v-4h6V20z"></path>{" "}
+            <rect x="6" y="28" width="10" height="2"></rect>{" "}
+            <rect x="6" y="32" width="10" height="2"></rect>{" "}
+            <rect x="6" y="36" width="10" height="2"></rect>{" "}
+            <rect x="6" y="40" width="10" height="2"></rect>{" "}
+            <rect x="20" y="28" width="10" height="2"></rect>{" "}
+            <rect x="20" y="32" width="10" height="2"></rect>{" "}
+            <rect x="34" y="28" width="5" height="2"></rect>{" "}
+            <rect x="34" y="32" width="5" height="2"></rect>{" "}
+            <rect x="20" y="36" width="10" height="2"></rect>{" "}
+            <rect x="20" y="40" width="10" height="2"></rect>{" "}
+            <rect x="6" y="45" width="2" height="2"></rect>{" "}
+            <rect x="10" y="45" width="2" height="2"></rect>{" "}
+            <rect x="14" y="45" width="2" height="2"></rect>{" "}
+            <rect x="20" y="45" width="2" height="2"></rect>{" "}
+            <rect x="24" y="45" width="2" height="2"></rect>{" "}
+            <rect x="28" y="45" width="2" height="2"></rect>{" "}
+            <rect x="6" y="49" width="2" height="2"></rect>{" "}
+            <rect x="10" y="49" width="2" height="2"></rect>{" "}
+            <rect x="14" y="49" width="2" height="2"></rect>{" "}
+            <rect x="20" y="49" width="2" height="2"></rect>{" "}
+            <rect x="24" y="49" width="2" height="2"></rect>{" "}
+            <rect x="28" y="49" width="2" height="2"></rect>{" "}
+            <rect x="6" y="53" width="2" height="2"></rect>{" "}
+            <rect x="10" y="53" width="2" height="2"></rect>{" "}
+            <rect x="14" y="53" width="2" height="2"></rect>{" "}
+            <rect x="20" y="53" width="2" height="2"></rect>{" "}
+            <rect x="24" y="53" width="2" height="2"></rect>{" "}
+            <rect x="28" y="53" width="2" height="2"></rect>{" "}
+          </g>{" "}
+        </g>{" "}
+      </g>
     </svg>
   );
 };

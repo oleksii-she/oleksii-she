@@ -47,3 +47,19 @@ export async function getSkills() {
       }`
   );
 }
+
+export async function getPortfolio() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "portfolio"]{
+    _id, description, title, roles, libraries, "image":image.asset->url, link
+      }`
+  );
+}
+
+export async function getPortfolioSection() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "portfolio-section"]{
+    description, section
+      }`
+  );
+}

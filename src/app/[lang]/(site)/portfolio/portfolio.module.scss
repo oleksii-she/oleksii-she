@@ -1,0 +1,61 @@
+@import "@/styles/utilities/mixin.scss";
+.portfolio-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.wrapper-description {
+  border-radius: 160px 0px;
+  border: 4px solid var(--White, #fff);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 40px;
+  padding-right: 20px;
+  height: max-content;
+  box-shadow: -4px -4px 2px 0px #12f7d6;
+
+  @include media(tablet) {
+    max-width: 550px;
+  }
+
+  @include media(laptop) {
+    max-width: 700px;
+  }
+  p {
+    padding: 25px;
+
+    color: var(--text-secondary-color);
+    @include size16;
+  }
+}
+.title {
+  @include size64;
+  font-family: var(--font-secondary);
+  text-align: center;
+  color: var(--text-secondary-color);
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.box-contents {
+  margin-bottom: 60px;
+
+  @include media(laptop) {
+    position: relative;
+    margin-bottom: 140px;
+  }
+}
+
+.keyboard-icon {
+  display: none;
+  @include media(laptop) {
+    display: block;
+    position: absolute;
+    top: -30px;
+    right: 150px;
+    width: 280px;
+  }
+}
+
+.portfolio-wrapper {
+}

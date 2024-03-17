@@ -14,7 +14,7 @@ export const Header = ({ locale }: { locale: Locale }) => {
         <div className="container mx-auto px-6">
           <div className={`${styles.wrapper}`}>
             <Link href="/" className="logo">
-              {"<S/>"}
+              {"</>"}
             </Link>
             <nav>
               <ul className={`${styles["nav-list"]}`}>
@@ -53,7 +53,7 @@ export const Header = ({ locale }: { locale: Locale }) => {
                 </li>
               </ul>
             </div>
-            <LocaleSwitcher />
+            <LocaleSwitcher lang={locale} />
           </div>
         </div>
       </div>

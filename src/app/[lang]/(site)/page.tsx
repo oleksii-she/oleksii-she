@@ -21,15 +21,16 @@ export const revalidate = 20;
 
 export default async function Home({
   params: { lang },
-}: {
+}: Readonly<{
   params: { lang: Locale };
-}) {
+}>) {
+  let locale = lang;
   const {
     hero: heroContents,
     skills,
     contact,
     message,
-  } = await getDictionary(lang);
+  } = await getDictionary(locale);
   const hero: IHero[] = await getHero();
   const profile: IProfile[] = await getProfile();
   const about: IAbout[] = await getAboutMe();
