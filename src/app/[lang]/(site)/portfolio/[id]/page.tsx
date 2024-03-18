@@ -20,6 +20,7 @@ const PortfolioId = async ({
   params: { id: string; lang: Locale };
 }) => {
   const portfolio: IPortfolio[] = await getPortfolioId(id);
+  console.log(portfolio[0].libraries.length, "portfolio");
 
   return (
     <main>
@@ -28,7 +29,7 @@ const PortfolioId = async ({
           <h2 className={styles["portfolio__title"]}>
             {lang === "uk" ? portfolio[0]?.title.uk : portfolio[0]?.title.en}
           </h2>
-          <div>
+          <div className={styles["portfolio__top-box"]}>
             <div>
               <Image
                 src={portfolio[0].image}
@@ -53,20 +54,20 @@ const PortfolioId = async ({
             </div>
             <div className={styles["portfolio__about"]}>
               <div>
-                <p>
-                  Роль:
+                <ul className={styles["portfolio__flex-wrap"]}>
+                  <span>Роль:</span>
                   {portfolio[0].roles?.map((role) => (
-                    <span key={role?._key}>{role?.name}</span>
+                    <li key={role?._key}>{role?.name}</li>
                   ))}
-                </p>
+                </ul>
               </div>
               <div>
-                <p>
-                  Технології:
+                <ul className={styles["portfolio__flex-wrap"]}>
+                  <span>Технології:</span>
                   {portfolio[0].libraries?.map((lib) => (
-                    <span key={lib?._key}>{lib?.name}</span>
+                    <li key={lib?._key}>{lib?.name}</li>
                   ))}
-                </p>
+                </ul>
               </div>
             </div>
           </div>
