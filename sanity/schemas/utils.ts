@@ -63,3 +63,11 @@ export async function getPortfolioSection() {
       }`
   );
 }
+
+export async function getPortfolioId(id: string) {
+  return createClient(clientConfig).fetch(
+    groq`*[_id == "${id}"]{
+    _id, description, title, roles, libraries, "image":image.asset->url, link, gitHub
+      }`
+  );
+}

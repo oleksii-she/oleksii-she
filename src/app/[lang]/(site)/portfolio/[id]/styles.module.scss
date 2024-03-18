@@ -1,0 +1,35 @@
+@import "@/styles/utilities/mixin.scss";
+
+.portfolio {
+  h2 {
+    @include size32;
+    margin-bottom: 16px;
+    color: var(--text-secondary-color);
+  }
+  &__description {
+    margin-top: 22px;
+
+    p {
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link-box {
+    margin-top: 16px;
+    display: flex;
+    a {
+      margin-right: 12px;
+
+      &:last-child {
+        padding: 8px;
+        width: max-content;
+        border-radius: 8px;
+        background: var(--white);
+        color: var(--bg-secondary);
+      }
+    }
+  }
+}

@@ -94,5 +94,10 @@ export const portfolioSchema = defineType({
       name: "link",
       type: "url",
     },
+    {
+      title: "GitHub",
+      name: "gitHub",
+      type: "url",
+    },
   ],
 });

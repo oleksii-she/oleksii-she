@@ -34,33 +34,45 @@ export const PortfolioList = ({
                   }
                 />
               </div>
-              <div>
-                {el.roles &&
-                  el.roles.length <= 3 &&
-                  el.roles.map((role) => (
-                    <div
-                      key={role._key}
-                      className={styles["item__wrapper-role"]}
-                    >
-                      <p>{role.name}</p>
-                    </div>
-                  ))}
-              </div>
+              <div className={styles["item__bottom-wrapper"]}>
+                <div className={styles["item__roles-wrapper"]}>
+                  {el.roles &&
+                    el.roles.length <= 3 &&
+                    el.roles.map((role) => (
+                      <div
+                        key={role._key}
+                        className={styles["item__wrapper-role"]}
+                      >
+                        <p>{role.name}</p>
+                      </div>
+                    ))}
+                </div>
 
-              <div>
-                {el.libraries &&
-                  el.libraries.length <= 3 &&
-                  el.libraries.map((lib) => (
-                    <div
-                      key={lib._key}
-                      className={styles["item__wrapper-role"]}
-                    >
-                      <p>{lib.name}</p>
-                    </div>
-                  ))}
-              </div>
+                <div className={styles["item__libraries-wrapper"]}>
+                  {el.libraries &&
+                    el.libraries.length <= 3 &&
+                    el.libraries.map((lib) => (
+                      <div
+                        key={lib._key}
+                        className={styles["item__wrapper-role"]}
+                      >
+                        <p>{lib.name}</p>
+                      </div>
+                    ))}
 
-              <Link href="">
+                  {el.libraries &&
+                    el.libraries.length > 3 &&
+                    el.libraries.slice(0, 3).map((lib) => (
+                      <div
+                        key={lib._key}
+                        className={styles["item__wrapper-role"]}
+                      >
+                        <p>{lib.name}</p>
+                      </div>
+                    ))}
+                </div>
+              </div>
+              <Link href={`/${lang}/portfolio/${el._id}`}>
                 Read More <span>{">>"}</span>
               </Link>
             </div>

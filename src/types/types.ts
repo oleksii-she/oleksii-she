@@ -91,4 +91,6 @@ export interface IPortfolio {
   ];
   description: any;
   image: string;
+  link: string;
+  gitHub: string;
 }

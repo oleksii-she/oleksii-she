@@ -16,11 +16,7 @@
 
   &__image-box {
     width: max-content;
-    // margin: 0 auto;
 
-    @include media(tablet) {
-      //   margin-right: 32px;
-    }
     img {
       width: 120px;
       height: 120px;
@@ -51,6 +47,11 @@
   }
 
   &__desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+
     @include size16;
     margin-bottom: 24px;
   }
@@ -61,13 +62,41 @@
   }
 
   &__wrapper-role {
-    margin-top: 28px;
     width: max-content;
     border-radius: 16px;
     padding: 8px;
     background-color: var(--bg-secondary);
     p {
       @include size14;
+    }
+  }
+
+  &__bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  &__roles-wrapper {
+    display: flex;
+    div {
+      margin-top: 0;
+      margin-right: 8px;
+    }
+  }
+  &__libraries-wrapper {
+    display: none;
+    @include media(tablet) {
+      display: flex;
+    }
+
+    div {
+      background-color: var(--text-secondary-color);
+      color: var(--bg-secondary);
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
