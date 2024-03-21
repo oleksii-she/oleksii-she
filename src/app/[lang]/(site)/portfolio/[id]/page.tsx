@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react";
@@ -7,6 +8,19 @@ import styles from "./styles.module.scss";
 import { Locale } from "../../../../../../i18n.config";
 import { GitHubIcon } from "@/components/icons";
 import { getPortfolio } from "../../../../../../sanity/schemas/utils";
+export const generateMetadata = async ({
+  params: { lang, id },
+}: {
+  params: { lang: Locale; id: string };
+}) => {
+  const portfolio: IPortfolio[] = await getPortfolioId(id);
+
+  if (lang === "uk") {
+    return { title: portfolio[0].title.uk, description: portfolio[0].title.uk };
+  } else {
+    return { title: portfolio[0].title.en, description: portfolio[0].title.en };
+  }
+};
 export async function generateStaticParams() {
   const posts: IPortfolio[] = await getPortfolio();
 

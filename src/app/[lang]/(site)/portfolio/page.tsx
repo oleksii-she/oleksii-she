@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./portfolio.module.scss";
 import { KeyboardIcon } from "@/components/icons";
 import { getPortfolio } from "../../../../../sanity/schemas/utils";
+import type { Metadata } from "next";
 import { getPortfolioSection } from "../../../../../sanity/schemas/utils";
 import { ISectionPortfolio, IPortfolio } from "@/types/types";
 export const revalidate = 20;
@@ -9,6 +10,11 @@ interface IBlogs {
   name: string;
   desc: string;
 }
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description: "Portfolio",
+};
 
 import { PortfolioList } from "@/components/portfolioList/portfolioList";
 import { Locale } from "../../../../../i18n.config";
