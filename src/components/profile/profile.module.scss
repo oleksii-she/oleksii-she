@@ -47,6 +47,7 @@
       }
       a {
         margin-left: 16px;
+        @include hoverLinkTextReverse;
       }
     }
   }
@@ -65,6 +66,8 @@
     padding: 16px 32px;
     border-radius: 32px;
     background: var(--white);
+
+    @include hoverLink;
   }
 
   &__cv-icon {

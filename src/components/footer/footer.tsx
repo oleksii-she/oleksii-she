@@ -1,35 +1,21 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import styles from "./header.module.scss";
+import styles from "./footer.module.scss";
 import logo from "../../../public/logo.png";
 import { UActiveLink } from "../UComponents/activeLink/activeLink";
 import LocaleSwitcher from "../localeSwitcher/localeSwitcher";
 import { LinkedinIcon, GitHubIcon, TelegramIcon } from "../icons";
 import { Locale } from "../../../i18n.config";
-export const Header = ({ locale }: { locale: Locale }) => {
+export const Footer = ({ locale }: { locale: Locale }) => {
   return (
-    <header className={styles.header}>
+    <footer className={styles.footer}>
       <div className="flex items-center">
         <div className="container mx-auto px-6">
           <div className={`${styles.wrapper}`}>
             <Link href="/" className="logo">
               {"</>"}
             </Link>
-            <nav>
-              <ul className={`${styles["nav-list"]}`}>
-                <li>
-                  <UActiveLink href={"/"} lang={locale}>
-                    Home
-                  </UActiveLink>
-                </li>
-                <li>
-                  <UActiveLink href={"/portfolio"} lang={locale}>
-                    Portfolio
-                  </UActiveLink>
-                </li>
-              </ul>
-            </nav>
 
             <div>
               <ul className={`${styles["contacts-list"]}`}>
@@ -65,10 +51,9 @@ export const Header = ({ locale }: { locale: Locale }) => {
                 </li>
               </ul>
             </div>
-            <LocaleSwitcher lang={locale} />
           </div>
         </div>
       </div>
-    </header>
+    </footer>
   );
 };

@@ -1,19 +1,17 @@
 @import "@/styles/utilities/mixin";
 
-.header {
+.footer {
   padding-top: 24px;
   padding-bottom: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 4px;
-  border-bottom: 1px solid silver;
-
-  @include media(tablet) {
-    // background-color: red;
-  }
+  padding-top: 16px;
+  border-top: 1px solid silver;
 }
 
 .nav-list {
@@ -33,16 +31,21 @@
 }
 
 .contacts-list {
-  display: none;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   @include media(tablet) {
     display: flex;
+    flex-direction: row;
     align-items: center;
   }
 
   li {
-    margin-right: 8px;
-
+    margin-bottom: 8px;
+    @include media(tablet) {
+      margin-left: 16px;
+    }
     @include media(laptop) {
       margin-right: 32px;
     }
@@ -71,7 +74,6 @@
 }
 
 .contacts-span {
-  display: none;
   @include media(laptop) {
     display: block;
   }

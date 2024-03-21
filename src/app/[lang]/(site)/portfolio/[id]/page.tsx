@@ -44,7 +44,7 @@ const PortfolioId = async ({
               <div className={styles["portfolio__link-box"]}>
                 {portfolio[0]?.gitHub && (
                   <Link href={portfolio[0]?.gitHub} target="blank">
-                    <GitHubIcon className="" />
+                    <GitHubIcon className={styles["icon-gitHub"]} />
                   </Link>
                 )}
                 <Link href={portfolio[0].link} target="blank">

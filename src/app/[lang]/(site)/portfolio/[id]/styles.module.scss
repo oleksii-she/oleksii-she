@@ -1,6 +1,7 @@
 @import "@/styles/utilities/mixin.scss";
 
 .portfolio {
+  padding-bottom: 20px;
   &__title {
     @include size32;
     margin-bottom: 16px;
@@ -48,11 +49,24 @@
   &__description {
     margin-top: 22px;
 
+    @include media(laptop) {
+      padding: 16px;
+    }
+
+    strong {
+      color: var(--text-secondary-color);
+      font-size: var(--text-size-primary);
+    }
     p {
       margin-bottom: 8px;
       &:last-child {
         margin-bottom: 0;
       }
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 30px;
     }
   }
   span {
@@ -63,14 +77,31 @@
     display: flex;
     a {
       margin-right: 12px;
-
+      &:first-child {
+        @include media(laptop) {
+          &:hover,
+          &:focus {
+            .icon-gitHub {
+              fill: var(--text-primary-color);
+              transition: var(--transition);
+            }
+          }
+        }
+      }
       &:last-child {
         padding: 8px;
         width: max-content;
         border-radius: 8px;
         background: var(--white);
         color: var(--bg-secondary);
+
+        @include hoverLink;
       }
     }
   }
+}
+
+.icon-gitHub {
+  width: 40px;
+  height: auto;
 }

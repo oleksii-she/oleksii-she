@@ -59,6 +59,7 @@
   a {
     color: var(--text-secondary-color);
     @include size16;
+    @include hoverLinkText;
   }
 
   &__wrapper-role {

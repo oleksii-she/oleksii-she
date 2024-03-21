@@ -18,6 +18,64 @@
   }
 }
 
+@mixin hoverLink {
+  @include media(laptop) {
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: var(--text-secondary-color);
+      transition: var(--transition);
+      box-shadow: 1px 2px 4px 4px rgba(0, 255, 213, 0.2);
+    }
+  }
+}
+
+@mixin hoverLinkReverse {
+  @include media(laptop) {
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: var(--white);
+      transition: var(--transition);
+      box-shadow: 1px 2px 4px 4px rgba(0, 255, 213, 0.2);
+    }
+  }
+}
+
+@mixin hoverLinkText {
+  @include media(laptop) {
+    &:hover {
+      outline: none;
+      color: var(--white);
+      transition: var(--transition);
+    }
+
+    &:focus {
+      outline: 1px 2px 4px 4px rgba(0, 255, 213, 0.2);
+      color: var(--white);
+      transition: var(--transition);
+      box-shadow: 1px 2px 4px 4px rgba(0, 255, 213, 0.2);
+    }
+  }
+}
+
+@mixin hoverLinkTextReverse {
+  @include media(laptop) {
+    &:hover {
+      outline: none;
+      color: var(--text-secondary-color);
+      transition: var(--transition);
+    }
+
+    &:focus {
+      outline: 1px 2px 4px 4px rgba(0, 255, 213, 0.2);
+      color: var(--white);
+      transition: var(--transition);
+      box-shadow: 1px 2px 4px 4px rgba(0, 255, 213, 0.2);
+    }
+  }
+}
+
 // class
 @mixin size32 {
   font-size: var(--text-size-big);

@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import styles from "./header.module.scss";
+import styles from "./footer.module.scss";
 import logo from "../../../public/logo.png";
 import { UActiveLink } from "../UComponents/activeLink/activeLink";
 import LocaleSwitcher from "../localeSwitcher/localeSwitcher";
-import { LinkedinIcon, GitHubIcon, TelegramIcon } from "../icons";
+import { LinkedinIcon, DiscordIcon, GitHubIcon, TelegramIcon } from "../icons";
 import { Locale } from "../../../i18n.config";
 export const Header = ({ locale }: { locale: Locale }) => {
   return (

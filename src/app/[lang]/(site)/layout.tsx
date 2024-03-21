@@ -3,7 +3,7 @@ import { Locale, i18n } from "../../../../i18n.config";
 import { Ubuntu, IBM_Plex_Mono } from "next/font/google";
 import "@/styles/globals.css";
 import { Header } from "@/components/header/header";
-
+import { Footer } from "@/components/footer/footer";
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "500"] });
 const IBM = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"] });
 export const metadata: Metadata = {
@@ -27,6 +27,7 @@ export default function RootLayout({
       <body className={`${ubuntu.className} ${IBM.className}`}>
         <Header locale={params.lang} />
         {children}
+        <Footer locale={params.lang} />
       </body>
     </html>
   );

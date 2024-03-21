@@ -39,6 +39,13 @@
       max-width: 264px;
     }
 
+    @include media(laptop) {
+      &:hover,
+      &:focus {
+        border-color: var(--white);
+        transition: var(--transition);
+      }
+    }
     @include media(desktop) {
       min-width: 320px;
       max-width: 400px;
@@ -56,6 +63,14 @@
     min-height: 210px;
 
     resize: none;
+
+    @include media(laptop) {
+      &:hover,
+      &:focus {
+        border-color: var(--white);
+        transition: var(--transition);
+      }
+    }
   }
 
   button {
@@ -71,7 +86,7 @@
     font-family: var(--font-secondary);
     font-size: var(--text-size-primary);
     text-transform: capitalize;
-
+    @include hoverLinkReverse;
     span {
       margin-right: 16px;
     }

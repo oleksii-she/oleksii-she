@@ -59,6 +59,7 @@
     a {
       color: var(--text-secondary-color);
       text-decoration: underline;
+      @include hoverLinkText;
     }
 
     code {
