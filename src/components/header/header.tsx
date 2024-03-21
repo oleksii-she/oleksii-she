@@ -19,12 +19,12 @@ export const Header = ({ locale }: { locale: Locale }) => {
             <nav>
               <ul className={`${styles["nav-list"]}`}>
                 <li>
-                  <UActiveLink href={"/"} lang={locale}>
+                  <UActiveLink href={`/${locale}/`} lang={locale}>
                     Home
                   </UActiveLink>
                 </li>
                 <li>
-                  <UActiveLink href={"/portfolio"} lang={locale}>
+                  <UActiveLink href={`/${locale}/portfolio`} lang={locale}>
                     Portfolio
                   </UActiveLink>
                 </li>
