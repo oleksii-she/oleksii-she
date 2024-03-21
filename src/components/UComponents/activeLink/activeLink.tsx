@@ -16,9 +16,9 @@ export const UActiveLink = ({
 }) => {
   const router = usePathname();
   if (!router) return;
-  const path = router.replace(`/${lang}`, ``);
+  const path = router;
 
-  if (path === "" && href === "/") {
+  if (path === `/${lang}` && href === `/${lang}/`) {
     return (
       <Link
         href={href}
@@ -29,7 +29,7 @@ export const UActiveLink = ({
     );
   }
 
-  if (path === href) {
+  if (`${path}` === href) {
     return (
       <Link
         href={href}
