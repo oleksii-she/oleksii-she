@@ -25,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ubuntu.className} ${IBM.className}`}>
-        <Header locale={params.lang} />
-        {children}
-        <Footer locale={params.lang} />
+        <div className="wrapper">
+          <Header locale={params.lang} />
+          {children}
+          <Footer locale={params.lang} />
+        </div>
       </body>
     </html>
   );

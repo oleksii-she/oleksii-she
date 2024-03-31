@@ -69,7 +69,7 @@ const PortfolioId = async ({
             <div className={styles["portfolio__about"]}>
               <div>
                 <ul className={styles["portfolio__flex-wrap"]}>
-                  <span>Роль:</span>
+                  <span>{lang === "uk" ? "Роль:" : "Role:"}</span>
                   {portfolio[0].roles?.map((role) => (
                     <li key={role?._key}>{role?.name}</li>
                   ))}
@@ -77,7 +77,7 @@ const PortfolioId = async ({
               </div>
               <div>
                 <ul className={styles["portfolio__flex-wrap"]}>
-                  <span>Технології:</span>
+                  <span>{lang === "uk" ? "Технології:" : "Technologies:"}</span>
                   {portfolio[0].libraries?.map((lib) => (
                     <li key={lib?._key}>{lib?.name}</li>
                   ))}
