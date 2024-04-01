@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     google: "google",
     yahoo: "yahoo",
     other: {
-      me: ["my-email", "my-link"],
+      me: ["oleksii.shevchenko92@gmail.com", "https://oleksii-she.vercel.app"],
     },
   },
 };
