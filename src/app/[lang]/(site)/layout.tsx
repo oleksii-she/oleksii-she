@@ -9,6 +9,14 @@ const IBM = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"] });
 export const metadata: Metadata = {
   title: "my resume",
   description: "my resume",
+
+  verification: {
+    google: "google",
+    yahoo: "yahoo",
+    other: {
+      me: ["my-email", "my-link"],
+    },
+  },
 };
 
 export async function generateStaticParams() {
