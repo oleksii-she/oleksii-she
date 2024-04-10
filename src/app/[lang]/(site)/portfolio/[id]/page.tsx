@@ -21,13 +21,13 @@ export const generateMetadata = async ({
     return { title: portfolio[0].title.en, description: portfolio[0].title.en };
   }
 };
-export async function generateStaticParams() {
-  const posts: IPortfolio[] = await getPortfolio();
+// export async function generateStaticParams() {
+//   const posts: IPortfolio[] = await getPortfolio();
 
-  return posts.map((el) => ({
-    slug: el._id.toString(),
-  }));
-}
+//   return posts.map((el) => ({
+//     slug: el._id.toString(),
+//   }));
+// }
 const PortfolioId = async ({
   params: { id, lang },
 }: {
