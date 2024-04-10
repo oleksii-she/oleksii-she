@@ -57,6 +57,7 @@ export default async function Home({
                   heroObj={hero[0]}
                   lang={lang}
                   letsTalks={heroContents.button}
+                  cv={profile[0].cv}
                 />
               )}
             </div>

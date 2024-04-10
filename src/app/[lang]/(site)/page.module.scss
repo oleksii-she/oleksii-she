@@ -7,6 +7,7 @@
   &__wrapper {
     @include media(desktop) {
       display: flex;
+      // flex-direction: row-reverse;
       justify-content: space-between;
     }
   }
@@ -16,44 +17,44 @@
   @include media(desktop) {
     position: relative;
 
-    animation-name: start-position;
-    animation-duration: 2s;
+    // animation-name: start-position;
+    // animation-duration: 2s;
   }
 }
 
-@keyframes start-position {
-  0% {
-    opacity: 0;
-    right: -100vw;
-  }
-  100% {
-    right: 0;
-    opacity: 1;
-  }
-}
+// @keyframes start-position {
+//   0% {
+//     opacity: 0;
+//     right: -100vw;
+//   }
+//   100% {
+//     right: 0;
+//     opacity: 1;
+//   }
+// }
 
 .profile {
   padding-bottom: 64px;
 
   @include media(desktop) {
-    position: relative;
-    padding-bottom: 0;
+    // position: relative;
+    // padding-bottom: 0;
 
-    animation-name: start-profile;
-    animation-duration: 3s;
+    // animation-name: start-profile;
+    // animation-duration: 3s;
   }
 }
 
-@keyframes start-profile {
-  0% {
-    opacity: 0;
-    left: -100vw;
-  }
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
+// @keyframes start-profile {
+//   0% {
+//     opacity: 0;
+//     left: -100vw;
+//   }
+//   100% {
+//     left: 0;
+//     opacity: 1;
+//   }
+// }
 .title {
   display: none;
   font-family: var(--font-secondary);

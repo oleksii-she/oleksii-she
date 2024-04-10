@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Locale, i18n } from "../../../../i18n.config";
-import { Ubuntu, IBM_Plex_Mono } from "next/font/google";
+import { Ubuntu, IBM_Plex_Mono, Caveat } from "next/font/google";
 import "@/styles/globals.css";
 import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
 const ubuntu = Ubuntu({ subsets: ["latin"], weight: ["400", "500"] });
 const IBM = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"] });
+const caveat = Caveat({ subsets: ["latin"], weight: ["600"] });
 export const metadata: Metadata = {
   title: "my resume",
   description: "my resume",
@@ -32,7 +33,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ubuntu.className} ${IBM.className}`}>
+      {/* <meta /> */}
+      <body className={` ${ubuntu.className}  ${IBM.className} `}>
         <div className="wrapper">
           <Header locale={params.lang} />
           {children}

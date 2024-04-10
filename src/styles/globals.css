@@ -28,7 +28,7 @@
   --line-height-big: 131.25%;
 
   /* font */
-
+  --font-primary: "__Ubuntu_909e52";
   --font-secondary: "__Ubuntu_909e52";
 }
 
@@ -55,6 +55,7 @@ main {
 }
 
 body {
+  font-family: var(--font-secondary);
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -63,10 +64,22 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-/* p {
-  font-family: "IBM Plex Mono";
-} */
 
+p,
+a,
+li {
+  font-family: var(--font-secondary);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-primary);
+}
+
+span {
+  font-family: var(--font-primary);
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

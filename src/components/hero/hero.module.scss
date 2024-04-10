@@ -2,23 +2,44 @@
 
 .hero {
   &__title-wrapper {
+    width: max-content;
+    position: relative;
     @include size14;
     color: var(--text-secondary-color);
-    font-family: var(--font-secondary);
     font-size: var(--text-size-big);
     line-height: var(--line-height-small);
     @include media(tablet) {
       font-size: var(--text-size-ultra-big);
+      line-height: 72px;
     }
 
     p {
       @include size14;
       color: var(--text-secondary-color);
     }
+    span {
+      @include size14;
+    }
     code {
       color: var(--text-secondary-color);
     }
     margin-bottom: 32px;
+
+    &::before {
+      content: "<h1>";
+      display: block;
+      font-family: var(--font-primary);
+      @include size14;
+    }
+    &::after {
+      content: "</h1>";
+      display: block;
+      position: absolute;
+      bottom: 8px;
+      right: -40px;
+      font-family: var(--font-primary);
+      @include size14;
+    }
   }
 
   &__text-wrapper {
@@ -40,6 +61,7 @@
       display: flex;
       align-items: center;
       @include hoverLinkText;
+      outline: none;
     }
   }
 
@@ -55,6 +77,37 @@
     svg {
       width: 24px;
       height: 24px;
+    }
+  }
+
+  &__box-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include media(tablet) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__link-cv {
+    max-width: 190px;
+    margin-top: 22px;
+    @include media(tablet) {
+      margin-top: 0;
+      margin-left: 45px;
+    }
+
+    background-color: var(--bg-secondary);
+    padding: 16px 32px;
+    border-radius: 32px;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: 1px 2px 4px 4px rgba(0, 255, 213, 0.2);
     }
   }
 }

@@ -9,19 +9,19 @@ export const Hero = ({
   heroObj,
   lang,
   letsTalks,
+  cv,
 }: {
   heroObj: IHero;
   lang: Locale;
   letsTalks: string;
+  cv: string;
 }) => {
   return (
     <div className={styles.hero}>
       <div className={styles["hero__title-wrapper"]}>
-        <p>{"<h1>"}</p>
         <PortableText
           value={lang === "uk" ? heroObj.title?.uk : heroObj.title?.en}
         />
-        <p>{"</h1>"}</p>
       </div>
 
       <div className={styles["hero__text-wrapper"]}>
@@ -31,13 +31,18 @@ export const Hero = ({
         </p>
         <span>{"</p>"}</span>
       </div>
-      <div className={styles["hero__lets-talks"]}>
-        <Link href="#contacts">
-          <span>{letsTalks}</span>
-        </Link>
-        <div className={styles["hero__icon-wrapper"]}>
-          <MailIcon className="" />
+      <div className={styles["hero__box-link"]}>
+        <div className={styles["hero__lets-talks"]}>
+          <Link href="#contacts">
+            <span>{letsTalks}</span>
+            <div className={styles["hero__icon-wrapper"]}>
+              <MailIcon className="" />
+            </div>
+          </Link>
         </div>
+        <Link href={cv} className={styles["hero__link-cv"]}>
+          <span>{lang === "uk" ? "Завантажити CV" : "Download CV"}</span>
+        </Link>
       </div>
     </div>
   );
