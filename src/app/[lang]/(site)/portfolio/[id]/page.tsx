@@ -8,6 +8,7 @@ import styles from "./styles.module.scss";
 import { Locale } from "../../../../../../i18n.config";
 import { GitHubIcon } from "@/components/icons";
 import { getPortfolio } from "../../../../../../sanity/schemas/utils";
+export const revalidate = 10;
 export const generateMetadata = async ({
   params: { lang, id },
 }: {
