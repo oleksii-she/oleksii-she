@@ -11,10 +11,10 @@ export const Header = ({ locale }: { locale: Locale }) => {
   return (
     <header className={styles.header}>
       <div className="flex items-center">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className={`${styles.wrapper}`}>
             <Link href="/" className="logo">
-              {"</>"}
+              {"<O/S>"}
             </Link>
             <nav>
               <ul className={`${styles["nav-list"]}`}>

@@ -46,7 +46,7 @@ export default async function Home({
           </h2>
         )}
 
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className={styles["section-hero__wrapper"]}>
             <div className={styles["profile"]}>
               {profile[0] && <Profile profileObj={profile[0]} lang={lang} />}
@@ -76,7 +76,7 @@ export default async function Home({
               />
             </div>
           </div>
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto">
             <AboutMe about={about[0]} lang={lang} />
           </div>
         </section>
@@ -91,7 +91,7 @@ export default async function Home({
             />
           </div>
         </div>
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className={styles.skills}>
             <div className={`${styles["skills__title-wrapper"]}`}>
               <h2>{skills.title}</h2>
@@ -120,7 +120,7 @@ export default async function Home({
             />
           </div>
         </div>
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div
             className={`${styles["skills__title-wrapper"]} ${styles["contacts-title-wrapper"]}`}
           >

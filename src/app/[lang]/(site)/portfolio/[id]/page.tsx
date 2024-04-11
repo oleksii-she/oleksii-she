@@ -40,7 +40,7 @@ const PortfolioId = async ({
   return (
     <main>
       <article className={styles.portfolio}>
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <h2 className={styles["portfolio__title"]}>
             {lang === "uk" ? portfolio[0]?.title.uk : portfolio[0]?.title.en}
           </h2>

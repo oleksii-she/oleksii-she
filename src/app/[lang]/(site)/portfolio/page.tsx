@@ -30,7 +30,7 @@ export default async function Portfolio({
   return (
     <main>
       <section className={styles["portfolio-section"]}>
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           {section && (
             <h2 className={styles.title}>
               {lang === "uk" ? section.section.uk : section.section.en}

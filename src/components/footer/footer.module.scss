@@ -3,15 +3,12 @@
 .footer {
   padding-top: 24px;
   padding-bottom: 24px;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 .wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 16px;
   border-top: 1px solid silver;
+  justify-content: space-between;
+  padding-top: 16px;
 }
 
 .nav-list {
@@ -32,35 +29,33 @@
 
 .contacts-list {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+
   @include media(tablet) {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    // column-gap: 8px;
   }
 
   li {
-    margin-bottom: 8px;
-    @include media(tablet) {
-      margin-left: 16px;
-    }
-    @include media(laptop) {
-      margin-right: 32px;
-    }
-
-    &:hover {
-      color: var(--text-secondary-color);
-      transition: var(--transition);
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-
     a {
+      @include media(laptop) {
+        &:hover,
+        &:focus {
+          svg {
+            fill: var(--text-title-color) !important;
+            transition: var(--transition);
+          }
+        }
+      }
+
       svg {
-        width: 20px;
+        width: 22px;
       }
 
       span {
@@ -71,6 +66,9 @@
       }
     }
   }
+  // &__icon {
+  //   width: 66px;
+  // }
 }
 
 .contacts-span {
