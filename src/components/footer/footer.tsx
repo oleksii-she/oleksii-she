@@ -7,6 +7,7 @@ import { UActiveLink } from "../UComponents/activeLink/activeLink";
 import LocaleSwitcher from "../localeSwitcher/localeSwitcher";
 import { LinkedinIcon, GitHubIcon, TelegramIcon } from "../icons";
 import { Locale } from "../../../i18n.config";
+import { ScrollTop } from "@/components/scrollTop/scrollTop";
 export const Footer = ({ locale }: { locale: Locale }) => {
   return (
     <footer className={styles.footer}>
@@ -16,7 +17,7 @@ export const Footer = ({ locale }: { locale: Locale }) => {
             <Link href="/" className="logo">
               {"<O/S>"}
             </Link>
-
+            <ScrollTop />
             <ul className={`${styles["contacts-list"]}`}>
               <li>
                 <Link

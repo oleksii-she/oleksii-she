@@ -4,7 +4,8 @@
   @include media(desktop) {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+
+    align-items: center;
   }
   &__title-wrapper {
     margin: 0 auto;
@@ -39,7 +40,7 @@
     margin-bottom: 64px;
 
     @include media(desktop) {
-      width: 880px;
+      width: 640px;
       margin-bottom: 0;
     }
   }

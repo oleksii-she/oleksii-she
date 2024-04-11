@@ -113,3 +113,40 @@ svg {
 button {
   cursor: pointer;
 }
+
+.scroll-top {
+  position: fixed;
+  width: 80px;
+  background-color: transparent;
+
+  /* top: -80px; */
+  /* bottom: -150px; */
+  bottom: 72px;
+  right: 0;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    width: 100px;
+    bottom: 82px;
+    right: 5%;
+  }
+
+  @media (min-width: 1280px) {
+    right: 7%;
+    bottom: 92px;
+  }
+}
+
+.icon-scroll {
+  stroke: var(--text-secondary-color);
+  fill: transparent;
+}
+
+.scroll-top:hover .icon-scroll {
+  stroke: var(--text-title-color);
+  transition: var(--transition);
+}
+
+.scroll-top---hidden {
+  display: none;
+}
