@@ -49,8 +49,9 @@
 
 .icon {
   stroke: var(--text-secondary-color);
-  width: 26px;
-  height: 26px;
+  fill: none;
+  width: 22px;
+  height: 22px;
   @include media(tablet) {
     width: 32px;
     height: 32px;
