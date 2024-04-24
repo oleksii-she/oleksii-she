@@ -35,7 +35,6 @@ const PortfolioId = async ({
   params: { id: string; lang: Locale };
 }) => {
   const portfolio: IPortfolio[] = await getPortfolioId(id);
-  console.log(portfolio[0].libraries.length, "portfolio");
 
   return (
     <main>

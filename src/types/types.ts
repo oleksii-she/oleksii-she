@@ -93,4 +93,5 @@ export interface IPortfolio {
   image: string;
   link: string;
   gitHub: string;
+  show: boolean | null;
 }

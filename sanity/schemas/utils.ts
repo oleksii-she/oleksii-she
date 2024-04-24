@@ -51,7 +51,7 @@ export async function getSkills() {
 export async function getPortfolio() {
   return createClient(clientConfig).fetch(
     groq`*[_type == "portfolio"]{
-    _id, description, title, roles, libraries, "image":image.asset->url, link
+    _id, description, title, roles, libraries, "image":image.asset->url, link, show
       }`
   );
 }
@@ -59,7 +59,7 @@ export async function getPortfolio() {
 export async function getPortfolioSection() {
   return createClient(clientConfig).fetch(
     groq`*[_type == "portfolio-section"]{
-    description, section
+    description, section,show
       }`
   );
 }

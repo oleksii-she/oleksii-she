@@ -324,18 +324,15 @@ export const KeyboardIcon = ({ className }: { className: string }) => {
       xmlSpace="preserve"
       className={className}
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
         strokeLinecap="round"
         strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
-        {" "}
         <g>
-          {" "}
           <g>
-            {" "}
             <path d="M2,13h10c0.6,0,1-0.4,1-1V2h33v5h2V1c0-0.6-0.4-1-1-1H12l0,0c-0.1,0-0.2,0-0.3,0.1h-0.1c-0.1,0.1-0.2,0.1-0.3,0.2l0,0 l-11,11l0,0c-0.1,0.1-0.1,0.2-0.2,0.3v0.1C0.1,11.8,0,11.9,0,12l0,0v47c0,0.6,0.4,1,1,1h29v-2H2L2,13L2,13z M3.4,11l3.8-3.8 L11,3.4V11H3.4z"></path>{" "}
             <path d="M53,39H43c-3.9,0-7,3.1-7,7v14h2V46c0-2.8,2.2-5,5-5h1.3l2.8,7.4c0.1,0.3,0.5,0.6,0.9,0.6s0.8-0.3,1.1-0.6l2.8-7.4H53 c2.8,0,5,2.2,5,5v14h2V46C60,42.1,56.9,39,53,39z M48.1,45.2L46.5,41h3.2L48.1,45.2z"></path>{" "}
             <rect x="47" y="51" width="2" height="2"></rect>{" "}
@@ -406,7 +403,7 @@ export const LinkedinIcon = ({ className }: { className: string }) => {
 export const ArrowTop = ({ className }: { className: string }) => {
   return (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
         strokeLinecap="round"

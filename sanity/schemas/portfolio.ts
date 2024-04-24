@@ -99,5 +99,12 @@ export const portfolioSchema = defineType({
       name: "gitHub",
       type: "url",
     },
+    {
+      title: "show card",
+      name: "show",
+      type: "boolean",
+      // group: "shopModule",
+      initialValue: true,
+    },
   ],
 });

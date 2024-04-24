@@ -75,10 +75,13 @@
   &__link-box {
     margin-top: 16px;
     display: flex;
+    margin-bottom: 16px;
     a {
       margin-right: 12px;
       &:first-child {
         @include media(laptop) {
+          margin-bottom: 0;
+
           &:hover,
           &:focus {
             .icon-gitHub {
@@ -94,7 +97,7 @@
         border-radius: 8px;
         background: var(--white);
         color: var(--bg-secondary);
-
+        margin-right: 0;
         @include hoverLink;
       }
     }

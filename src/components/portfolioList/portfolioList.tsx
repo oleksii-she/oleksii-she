@@ -18,6 +18,11 @@ export const PortfolioList = ({
   return (
     <ul>
       {portfolio.map((el) => {
+        console.log(el, "el");
+
+        if (el.show === false) {
+          return null;
+        }
         return (
           <li key={el._id} className={styles["item"]}>
             <div className={styles["item__image-box"]}>
