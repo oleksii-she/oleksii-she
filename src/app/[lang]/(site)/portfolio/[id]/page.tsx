@@ -29,6 +29,7 @@ export const generateMetadata = async ({
 //     slug: el._id.toString(),
 //   }));
 // }
+
 const PortfolioId = async ({
   params: { id, lang },
 }: {
