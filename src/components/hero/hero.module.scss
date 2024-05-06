@@ -10,7 +10,6 @@
     line-height: var(--line-height-small);
     @include media(tablet) {
       font-size: var(--text-size-ultra-big);
-      line-height: 72px;
     }
 
     p {
@@ -33,10 +32,8 @@
     }
     &::after {
       content: "</h1>";
-      display: block;
-      position: absolute;
-      bottom: 8px;
-      right: -40px;
+      display: flex;
+      justify-content: flex-end;
       font-family: var(--font-primary);
       @include size14;
     }
@@ -48,6 +45,25 @@
       padding: 16px 24px;
       color: var(--white);
       max-width: 697px;
+
+      &::before {
+        content: "<p>";
+        // display: block;
+        margin-right: 8px;
+        color: var(--text-secondary-color);
+        font-family: var(--font-primary);
+        @include size14;
+      }
+      &::after {
+        content: "</p>";
+        color: var(--text-secondary-color);
+        margin-left: 8px;
+        // position: absolute;
+
+        // right: 0;
+        font-family: var(--font-primary);
+        @include size14;
+      }
     }
     margin-bottom: 16px;
   }

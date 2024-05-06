@@ -25,11 +25,9 @@ export const Hero = ({
       </div>
 
       <div className={styles["hero__text-wrapper"]}>
-        <span>{"<p>"}</span>
         <p>
           {lang === "uk" ? heroObj.description?.uk : heroObj.description?.en}
         </p>
-        <span>{"</p>"}</span>
       </div>
       <div className={styles["hero__box-link"]}>
         <div className={styles["hero__lets-talks"]}>

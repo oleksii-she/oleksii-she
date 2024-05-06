@@ -7,31 +7,20 @@
   &__wrapper {
     @include media(desktop) {
       display: flex;
-      // flex-direction: row-reverse;
+
       justify-content: space-between;
     }
   }
 }
 
 .hero-box {
-  @include media(desktop) {
-    position: relative;
+  // @include media(desktop) {
+  //   position: relative;
 
-    // animation-name: start-position;
-    // animation-duration: 2s;
-  }
+  //   // animation-name: start-position;
+  //   // animation-duration: 2s;
+  // }
 }
-
-// @keyframes start-position {
-//   0% {
-//     opacity: 0;
-//     right: -100vw;
-//   }
-//   100% {
-//     right: 0;
-//     opacity: 1;
-//   }
-// }
 
 .profile {
   padding-bottom: 64px;

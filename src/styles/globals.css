@@ -119,8 +119,6 @@ button {
   width: 80px;
   background-color: transparent;
 
-  /* top: -80px; */
-  /* bottom: -150px; */
   bottom: 72px;
   right: 0;
   cursor: pointer;
@@ -149,4 +147,11 @@ button {
 
 .scroll-top---hidden {
   display: none;
+}
+
+.loading-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
